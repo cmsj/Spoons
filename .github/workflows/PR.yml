@@ -45,9 +45,9 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
 
     # Runs a single command using the runners shell
-    - name: Run a one-line script
+    - name: Show changed files
       run: cat $HOME/files.json
 
     # Remove Hammerspoon checkout
     - name: Remove Hammerspoon checkout
-      run: rm -rf hammerspoon
+      run: rm -rfv hammerspoon
