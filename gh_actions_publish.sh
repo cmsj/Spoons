@@ -11,6 +11,11 @@ set -eu
 # Find the Spoons that have been modified
 SPOONS=$(cat "${HOME}/files.json" | jq -r -c '.[] | select(contains(".lua"))' | sed -e 's#^Source/\(.*\).spoon/.*#\1#' | sort | uniq)
 
+if [ "${SPOONS}" == "" ]; then
+    echo "No Spoons modified, halting Action"
+    exit 1
+fi
+
 git config --global user.email "spoonPRbot@tenshu.net"
 git config --global user.name "Spoons GitHub Bot"
 
