@@ -12,8 +12,8 @@ set -eu
 SPOONS=$(cat "${HOME}/files.json" | jq -r -c '.[] | select(contains(".lua"))' | sed -e 's#^Source/\(.*\).spoon/.*#\1#' | sort | uniq)
 
 if [ "${SPOONS}" == "" ]; then
-    echo "No Spoons modified, halting Action"
-    exit 78
+    echo "No Spoons modified, skipping docs rebuild"
+    exit 0
 fi
 
 git config --global user.email "spoonPRbot@tenshu.net"
