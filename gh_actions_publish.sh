@@ -11,6 +11,9 @@ set -eu
 # Find the Spoons that have been modified
 SPOONS=$(cat "${HOME}/files.json" | jq -r -c '.[] | select(contains(".lua"))' | sed -e 's#^Source/\(.*\).spoon/.*#\1#' | sort | uniq)
 
+git config --global user.email "spoonPRbot@tenshu.net"
+git config --global user.name "Spoons GitHub Bot"
+
 while IFS= read -r SPOON ; do
     ./hammerspoon/scripts/docs/bin/build_docs.py -e ./hammerspoon/scripts/docs/templates/ -o Source/${SPOON}.spoon/ -j -n Source/${SPOON}.spoon/
     rm Source/${SPOON}.spoon/docs_index.json
