@@ -22,7 +22,7 @@ while IFS= read -r SPOON ; do
     rm -f Spoons/${SPOON}.spoon.zip
     make
     git add Spoons/${SPOON}.spoon.zip
-    git commit -am "Add binary package for ${SPOON}. Closes #${PR}"
+    git commit -am "Add binary package for ${SPOON}."
     ./build_docs.sh
     git add docs
     git commit -am "Update docs"
