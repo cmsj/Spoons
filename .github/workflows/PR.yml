@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: 'Hammerspoon/hammerspoon'
-        path: '$HOME/hammerspoon'
+        path: '/hammerspoon'
 
     # Check-out the Spoons PR
     - uses: actions/checkout@v2
