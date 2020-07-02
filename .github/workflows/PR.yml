@@ -44,9 +44,13 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    # Runs a single command using the runners shell
+    # Show modified files, as a debug log
     - name: Show changed files
       run: cat $HOME/files.json
+
+    # Update docs and zips
+    - name: Update docs and zips
+      run: ./gh_actions_publish.sh
 
     # Remove Hammerspoon checkout
     - name: Remove Hammerspoon checkout
