@@ -35,7 +35,7 @@
     "type": "Method"
   },
   {
-    "desc": "Listens for keyboard brightness keypresses and alters brightness on all supported displays.",
+    "desc": "lol9 Listens for keyboard brightness keypresses and alters brightness on all supported displays.",
     "name": "AllBrightness",
     "type": "Module"
   },

@@ -184,8 +184,8 @@
     ],
     "Method": [],
     "Variable": [],
-    "desc": "Listens for keyboard brightness keypresses and alters brightness on all supported displays.",
-    "doc": "Listens for keyboard brightness keypresses and alters brightness on all supported displays.\nNote: This is primarily intended for Macs with no internal display, but should work for those with an internal display.\nNote: External displays will only respond to brightness change requests if they were either made by Apple, or are LG UltraFine displays (which were designed by Apple).\n\nDownload: [https://github.com/Hammerspoon/Spoons/raw/master/Spoons/AllBrightness.spoon.zip](https://github.com/Hammerspoon/Spoons/raw/master/Spoons/AllBrightness.spoon.zip)",
+    "desc": "lol9 Listens for keyboard brightness keypresses and alters brightness on all supported displays.",
+    "doc": "lol9 Listens for keyboard brightness keypresses and alters brightness on all supported displays.\nNote: This is primarily intended for Macs with no internal display, but should work for those with an internal display.\nNote: External displays will only respond to brightness change requests if they were either made by Apple, or are LG UltraFine displays (which were designed by Apple).\n\nDownload: [https://github.com/Hammerspoon/Spoons/raw/master/Spoons/AllBrightness.spoon.zip](https://github.com/Hammerspoon/Spoons/raw/master/Spoons/AllBrightness.spoon.zip)",
     "items": [
       {
         "def": "AllBrightness:start()",
