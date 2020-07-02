@@ -1,0 +1,49 @@
+# Workflow to rebuild Spoons automatically
+
+name: PR
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Check-out the Hammerspoon repository we need for doc building
+    - uses: actions/checkout@v2
+      with:
+        repository: 'https://github.com/Hammerspoon/hammerspoon'
+        path: '$HOME/hammerspoon'
+    
+    # Check-out the Spoons PR
+    - uses: actions/checkout@v2
+
+    # Set up Python
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Install doc-building dependencies
+    - name: Install docs dependencies
+      run: |
+        cd $HOME/hammerspoon
+        python -m pip install -r requirements.txt
+
+    # Find files modified by this PR
+    - uses: lots0logs/gh-action-get-changed-files@2.1.4
+      with:
+        token: GITHUB_TOKEN
+
+    # Runs a single command using the runners shell
+    - name: Run a one-line script
+      run: cat $HOME/files.json
