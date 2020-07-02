@@ -22,9 +22,9 @@ jobs:
     # Check-out the Hammerspoon repository we need for doc building
     - uses: actions/checkout@v2
       with:
-        repository: 'https://github.com/Hammerspoon/hammerspoon'
+        repository: 'Hammerspoon/hammerspoon'
         path: '$HOME/hammerspoon'
-    
+
     # Check-out the Spoons PR
     - uses: actions/checkout@v2
 
