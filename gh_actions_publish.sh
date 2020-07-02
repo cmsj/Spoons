@@ -13,7 +13,7 @@ SPOONS=$(cat "${HOME}/files.json" | jq -r -c '.[] | select(contains(".lua"))' | 
 
 if [ "${SPOONS}" == "" ]; then
     echo "No Spoons modified, halting Action"
-    exit 1
+    exit 78
 fi
 
 git config --global user.email "spoonPRbot@tenshu.net"
