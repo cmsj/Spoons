@@ -42,7 +42,7 @@ jobs:
     # Find files modified by this PR
     - uses: lots0logs/gh-action-get-changed-files@2.1.4
       with:
-        token: GITHUB_TOKEN
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
