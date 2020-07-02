@@ -1,6 +1,6 @@
 --- === AllBrightness ===
 ---
---- lol7 Listens for keyboard brightness keypresses and alters brightness on all supported displays.
+--- lol8 Listens for keyboard brightness keypresses and alters brightness on all supported displays.
 --- Note: This is primarily intended for Macs with no internal display, but should work for those with an internal display.
 --- Note: External displays will only respond to brightness change requests if they were either made by Apple, or are LG UltraFine displays (which were designed by Apple).
 ---
