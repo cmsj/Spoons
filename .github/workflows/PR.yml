@@ -55,3 +55,9 @@ jobs:
     # Remove Hammerspoon checkout
     - name: Remove Hammerspoon checkout
       run: rm -rfv hammerspoon
+
+    # Push changes
+     - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
