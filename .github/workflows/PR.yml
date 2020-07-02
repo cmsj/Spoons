@@ -19,14 +19,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    # Check-out the Spoons PR
+    - uses: actions/checkout@v2
+
     # Check-out the Hammerspoon repository we need for doc building
     - uses: actions/checkout@v2
       with:
         repository: 'Hammerspoon/hammerspoon'
         path: 'hammerspoon'
-
-    # Check-out the Spoons PR
-    - uses: actions/checkout@v2
 
     # Set up Python
     - uses: actions/setup-python@v2
